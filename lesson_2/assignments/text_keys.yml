@@ -1,0 +1,49 @@
+hello: "Hello"
+
+welcome: "! Welcome to Calculator!"
+
+num_prompt: "You have chosen 0.
+     The number 0 if used in the multiplication gives 0 as result;
+     if used as a denominator in a fraction it gives Infinite as result.
+          
+     Are you sure you want to use 0 ? (y/n):"
+
+real: "Please type a real number:" 
+
+no_zero: "Please choose a number different from 0:"
+
+val_op: "Please try a valid operator"
+
+name: "Please type your name"
+
+nothing: "It looks like you did not type anything"
+
+first_num: "What's the first number?"
+
+second_num: "What's the second number?"
+
+op_prompt: "What operation would you like to peform?\n
+     Add '1'\n
+     Subtract '2'\n
+     Multiply '3'\n
+     Divide '4' "
+
+add: "Adding"
+
+sub: "Subtracting"
+
+mult: "Multiplying"
+
+div: "Dividing"
+
+and: "and"
+
+give: "gives"
+
+res: "as result "
+
+new_cal: "Would you like to perform another operation?"
+
+thanks: "Thanks for using Calculator"
+
+

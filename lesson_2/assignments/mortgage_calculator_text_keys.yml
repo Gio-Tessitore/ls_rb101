@@ -1,0 +1,9 @@
+welcome: "Welcome to the Mortgage Calculator"
+amount: "Please type the amount you would like to borrow,in USD$ \n 
+- use the comma (,) to separate thousands. Any decimals will be discarted."
+apr: "What is the annual percentage rate you will borrow at ? (in %)."
+month: "Please specify how many months you will take to pay the loan."
+num_prompt_loan: "Please input your number correctly.\n
+ =>  Use the comma (,) to separate thousands. Any decimals will be discarted."
+num_prompt_percent: "Please type a percentage from 1 to 99, without using any units"
+num_prompt_month: "There are 12 months in a year! Try again!"

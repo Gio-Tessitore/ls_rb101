@@ -1,0 +1,47 @@
+hello: "Ciao"
+
+welcome: "! Benvenuto al Calcolatore!"
+
+num_prompt: "Hai scelto 0.
+      Il numero 0 se usato nella moltiplicazione dà 0 come risultato;
+      se usato come denominatore in una frazione, dà Infinito come risultato.
+          
+      Sei sicuro di voler usare 0? (Y / n):"
+
+real: "Digitare un numero reale:"
+
+no_zero: "Scegli un numero diverso da 0:"
+
+val_op: "Prova un operatore valido"
+
+name: "Per favore, digita il tuo nome"
+
+nothing: "Sembra che tu non abbia digitato nulla"
+
+first_num: "Qual'è il primo numero?"
+
+second_num: "Qual'è il secondo numero?"
+
+op_prompt: "Quale operazione desideri eseguire? \n
+      Aggiungi '1' \n
+      Sottrai '2' \n
+      Moltiplica '3' \n
+      Dividi '4' "
+
+add: "Aggiungere"
+
+sub: "Sottrarre"
+
+mult: "Moltiplicare"
+
+div: "Dividere"
+
+and: "e"
+
+give: "da"
+
+res: "come risultato"
+
+new_cal: "Vuoi eseguire un'altra operazione?"
+
+thanks: "Grazie per aver usato la calcolatrice"
