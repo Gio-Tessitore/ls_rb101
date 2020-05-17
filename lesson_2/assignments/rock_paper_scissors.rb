@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 VALID_CHOICES = %w[rock paper scissors].freeze
+
 def prompt(message)
   Kernel.puts("=> #{message}")
 end
