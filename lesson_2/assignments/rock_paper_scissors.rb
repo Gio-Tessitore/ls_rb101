@@ -6,11 +6,12 @@ def prompt(message)
 end
 
 def who_wins(user, computer)
-  if [%w[rock scissors], %w[paper rock],
-      %w[scissors paper]].include?([user, computer])
+  who_wins = [%w[rock scissors], %w[paper rock],
+              %w[scissors paper]]
+
+  if who_wins.include?([user, computer])
     user
-  elsif [%w[scissors rock], %w[rock paper],
-         %w[paper scissors]].include?([user, computer])
+  elsif who_wins.include?([computer, user])
     computer
   elsif user == computer
     'tie'
