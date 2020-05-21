@@ -10,7 +10,7 @@ def print_with_prefix(ra)
   ra.map { |i| " #{[i].join('')}   -" }.join('   ')
 end
 
-# I created this method because I wanted to print all
+# I created the next method because I wanted to print all
 # the options for the game on one line.
 # The method iterates through the argument array,
 # takes the first letter (initial) of each string element
@@ -84,11 +84,11 @@ loop do
     # this is the inner loop. it checks if the input is valid
     loop do
       print_options(VALID_CHOICES)
-      choice = Kernel.gets.chomp
+      user_choice = Kernel.gets.chomp
 
       # grabs the initial/s a user inputs
       # and translates it in one of the elements in the array
-      case choice
+      case user_choice
       when 'r'
         user_choice = 'rock'
       when 'p'
