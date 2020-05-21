@@ -73,7 +73,6 @@ prompt("Welcome to
 
 # This is the outer loop. At the end it will ask you if you want to play again.
 loop do
-  choice = 0
   user_points = 0
   computer_points = 0
 
