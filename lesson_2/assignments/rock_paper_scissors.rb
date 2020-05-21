@@ -5,7 +5,7 @@ def prompt(message)
   Kernel.puts("\n=> #{message}")
 end
 
-# this method serves to print_options method to add spaces and symbols
+# this method serves to the print_options method to add spaces and symbols
 def print_with_prefix(ra)
   ra.map { |i| " #{[i].join('')}   -" }.join('   ')
 end
@@ -15,31 +15,30 @@ end
 # The method iterates through the argument array,
 # takes the first letter (initial) of each string element
 # of the array and saves it in a new array. If the first letter of the
-# next element is already present in the new array the
-# iteration captures the first and second letter.
+# next element is already present in the new array, the
+# iteration captures the first and second letter together.
 # While the iteration do this, the method also
 # associates with each initial/s, a second element
 # which is the string 'for' and a third element
 # which is the whole string that the iteration took the initial from.
+# So, it creates an array of subarray formed by three elements each.
+# And then it prints them out.
 
 def print_options(ra)
-  list_of_options = []
-  second_term = ' for ' 
+  options = []
   new_ra = []
-  index1 = 0 
-  index2 = 0 
-  i = 0
+  i0 = 0
+  i1 = 0
   ra.each do
-    new_ra << if new_ra.include?(ra[index1][index2])
-                ra[index1][index2] + ra[index1][index2 + 1]
+    new_ra << if new_ra.include?(ra[i0][i1])
+                ra[i0][i1] + ra[i0][i1 + 1]
               else
-                ra[index1][index2]
+                ra[i0][i1]
               end
-    index1 += 1
-    list_of_options << [new_ra[i], second_term, ra[i]]
-    i += 1
+    options << [new_ra[i0], ' for ', ra[i0]]
+    i0 += 1
   end
-  prompt("TYPE: #{print_with_prefix(list_of_options)}")
+  prompt("TYPE: #{print_with_prefix(options)}")
 end
 
 # making the variable accessible
