@@ -83,37 +83,33 @@ loop do
 
     # this is the inner loop. it checks if the input is valid
 
-    get_player_choice =
+    loop do
+      print_options(VALID_CHOICES)
+      user_choice = Kernel.gets.chomp
 
-      loop do
-        print_options(VALID_CHOICES)
-        user_choice = Kernel.gets.chomp
+      # grabs the initial/s a user inputs
+      # and translates it in one of the elements in the array
 
-        # grabs the initial/s a user inputs
-        # and translates it in one of the elements in the array
-
-        validate_input =
-
-          case user_choice
-          when 'r'
-            user_choice = 'rock'
-          when 'p'
-            user_choice = 'paper'
-          when 's'
-            user_choice = 'scissors'
-          when 'sp'
-            user_choice = 'spock'
-          when 'l'
-            user_choice = 'lizard'
-          end
-
-        if VALID_CHOICES.include?(user_choice)
-          valid_choice = user_choice
-          break
-        else
-          prompt('This is not a valid choice!')
-        end
+      case user_choice
+      when 'r'
+        user_choice = 'rock'
+      when 'p'
+        user_choice = 'paper'
+      when 's'
+        user_choice = 'scissors'
+      when 'sp'
+        user_choice = 'spock'
+      when 'l'
+        user_choice = 'lizard'
       end
+
+      if VALID_CHOICES.include?(user_choice)
+        valid_choice = user_choice
+        break
+      else
+        prompt('This is not a valid choice!')
+      end
+    end
 
     # it is the computer turn to play
     get_computer_choice = VALID_CHOICES.sample
@@ -123,7 +119,6 @@ loop do
 
     # here we add the points
     update_score =
-
       if best_player(user_choice, computer_choice) == user_choice
         user_points += 1
       elsif best_player(user_choice, computer_choice) == computer_choice
@@ -133,12 +128,10 @@ loop do
       end
 
     # it prompts the result of each set
-    display_score =
-      if update_score == false
-        prompt ('It´s a tie')
-      end
-    display_score = prompt("You have #{user_points} point/s
-      and the computer has #{computer_points} point/s")
+    if update_score == false
+      prompt("It´s a tie")
+    end
+    prompt("You: #{user_points} point/s - Computer #{computer_points} point/s")
   end
 
   # it prompts the final result
